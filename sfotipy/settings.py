@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'albums',
     'tracks',
     'artists',
+    'userprofiles',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -106,3 +107,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Backends
+AUTHENTICATION_BACKENDS = (
+    'userprofiles.backends.EmailBackend',
+)
